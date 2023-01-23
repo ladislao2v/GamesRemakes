@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ContactWithUnit : RandomColor
 {
+
     private string[] objectNames = new string[4]
     {
         "BluePart",

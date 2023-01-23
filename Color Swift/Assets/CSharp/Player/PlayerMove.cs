@@ -1,7 +1,7 @@
 using NTC.Global.Cache;
 using UnityEngine;
 
-public class PlayerMove : MonoCache, IControllable
+public class PlayerMove : MonoCache, IJumpable
 {
     [SerializeField] private float _jumpForce;
 
@@ -9,17 +9,6 @@ public class PlayerMove : MonoCache, IControllable
     private void Awake()
     {
         _rigidbody = Get<Rigidbody2D>();
-    }
-
-    protected override void Run()
-    {
-        CheckIteraction();
-    }
-
-    private void CheckIteraction()
-    {
-        if (Input.GetMouseButtonDown(0))
-            Jump();
     }
 
     private void Jumping()
